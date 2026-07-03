@@ -1,10 +1,195 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Blog</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sujay — Notes on tech, fitness, food, and books</title>
+  <meta name="description" content="A personal notebook by Sujay: notes on tech, fitness, food, and books." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..900,50..100;1,9..144,300..900,50..100&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <h1>Welcome to My Blog!</h1>
-    <p>Posts about tech, food, books, and fitness coming soon.</p>
+  <header class="masthead">
+    <div class="masthead__wrap">
+      <a href="/" class="masthead__mark">Sujay<span class="masthead__dot">.</span>notes</a>
+      <span class="masthead__meta">Vol. 01 &middot; Jul 2026</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero__grid">
+        <div class="hero__body">
+          <p class="kicker">Hello, welcome in&hairsp;—</p>
+          <h1 class="hero__title" id="hero-heading">I&rsquo;m <em>Sujay</em>.</h1>
+          <p class="hero__lede">
+            A software engineer keeping a public notebook &mdash;
+            on the code I write, the food I cook, the books I finish,
+            and the training I stick to.
+          </p>
+          <ul class="hero__links">
+            <li><a href="mailto:sjsujay96@gmail.com">Write to me</a></li>
+            <li><a href="https://github.com/sjsujay">GitHub</a></li>
+          </ul>
+        </div>
+
+        <div class="hero__portrait" aria-hidden="true">
+          <div class="hero__portrait-inner"></div>
+          <span class="hero__portrait-caption">Est. 2026</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="now" aria-labelledby="now-heading">
+      <div class="now__card">
+        <span class="now__tape" aria-hidden="true"></span>
+        <p class="kicker">Now &middot; updated Jul 2026</p>
+        <h2 class="now__heading" id="now-heading">Currently&hellip;</h2>
+        <ul class="now__list">
+          <li><span class="now__label">Reading</span><em>The Beginning of Infinity</em> by David Deutsch</li>
+          <li><span class="now__label">Training</span>a six-day PPL split, chasing a 2&times; bodyweight deadlift</li>
+          <li><span class="now__label">Cooking</span>kimchi jjigae from scratch, mostly at 11pm</li>
+          <li><span class="now__label">Building</span>a hobby renderer in Rust, one weekend at a time</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="category category--tech" aria-labelledby="cat-tech">
+      <header class="category__header">
+        <div class="category__intro">
+          <p class="kicker">&sect; 01 &middot; Tech</p>
+          <h2 class="category__title" id="cat-tech">On <em>tech</em>.</h2>
+          <p class="category__blurb">Half-formed thoughts on tools, systems, and the code I&rsquo;m writing this month.</p>
+        </div>
+        <a class="all-link" href="#" aria-label="See all Tech notes">All notes <span class="all-link__arrow" aria-hidden="true">&rarr;</span></a>
+      </header>
+      <ol class="cards">
+        <li class="card">
+          <span class="card__num">N&deg;&thinsp;01</span>
+          <h3 class="card__title"><a href="#">Notes on running local LLMs after a year</a></h3>
+          <p class="card__meta">Jun 2026 &middot; 8 min read</p>
+          <p class="card__excerpt">A year of tinkering with 7B&ndash;70B models on modest hardware &mdash; what I actually reach for, what quietly disappointed me, and where the tooling still hurts.</p>
+        </li>
+        <li class="card">
+          <span class="card__num">N&deg;&thinsp;02</span>
+          <h3 class="card__title"><a href="#">Why I moved off VSCode (and what I miss)</a></h3>
+          <p class="card__meta">May 2026 &middot; 6 min read</p>
+          <p class="card__excerpt">After eight years I switched editors. The wins were real, the losses subtle, and both took a full month to see clearly.</p>
+        </li>
+        <li class="card">
+          <span class="card__num">N&deg;&thinsp;03</span>
+          <h3 class="card__title"><a href="#">Debugging a heisenbug in async Rust</a></h3>
+          <p class="card__meta">Apr 2026 &middot; 11 min read</p>
+          <p class="card__excerpt">It only reproduced on Tuesdays, and only when the tracing subscriber was attached. A tour through what turned out to be a very literal race condition.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="category category--fitness" aria-labelledby="cat-fitness">
+      <header class="category__header">
+        <div class="category__intro">
+          <p class="kicker">&sect; 02 &middot; Fitness</p>
+          <h2 class="category__title" id="cat-fitness">On the <em>body</em>.</h2>
+          <p class="category__blurb">Programs I&rsquo;ve tried, injuries I&rsquo;ve earned, and boring routines that quietly worked.</p>
+        </div>
+        <a class="all-link" href="#" aria-label="See all Fitness notes">All notes <span class="all-link__arrow" aria-hidden="true">&rarr;</span></a>
+      </header>
+      <ol class="cards">
+        <li class="card">
+          <span class="card__num">N&deg;&thinsp;01</span>
+          <h3 class="card__title"><a href="#">Programming for hypertrophy: what I actually did</a></h3>
+          <p class="card__meta">Jun 2026 &middot; 9 min read</p>
+          <p class="card__excerpt">Not what the influencers said, not what the papers said &mdash; the boring middle-ground routine that finally moved the tape measure after two stalled years.</p>
+        </li>
+        <li class="card">
+          <span class="card__num">N&deg;&thinsp;02</span>
+          <h3 class="card__title"><a href="#">Why I stopped chasing 1RMs</a></h3>
+          <p class="card__meta">Apr 2026 &middot; 5 min read</p>
+          <p class="card__excerpt">One-rep maxes cost me two injuries and a lot of sleep. Here&rsquo;s the case for boring, sub-maximal, forever-repeatable training.</p>
+        </li>
+        <li class="card">
+          <span class="card__num">N&deg;&thinsp;03</span>
+          <h3 class="card__title"><a href="#">Sleep, protein, patience</a></h3>
+          <p class="card__meta">Feb 2026 &middot; 7 min read</p>
+          <p class="card__excerpt">The three variables that beat every clever program I&rsquo;ve ever tried. A note to my past self, mostly.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="category category--food" aria-labelledby="cat-food">
+      <header class="category__header">
+        <div class="category__intro">
+          <p class="kicker">&sect; 03 &middot; Food</p>
+          <h2 class="category__title" id="cat-food">On <em>food</em>.</h2>
+          <p class="category__blurb">Recipes I keep coming back to, techniques I finally got, and honest opinions on whether it was worth the effort.</p>
+        </div>
+        <a class="all-link" href="#" aria-label="See all Food notes">All notes <span class="all-link__arrow" aria-hidden="true">&rarr;</span></a>
+      </header>
+      <ol class="cards">
+        <li class="card">
+          <span class="card__num">N&deg;&thinsp;01</span>
+          <h3 class="card__title"><a href="#">The three-day sourdough that finally worked</a></h3>
+          <p class="card__meta">Jun 2026 &middot; 10 min read</p>
+          <p class="card__excerpt">I killed four starters before I got one to hold on. A patient method with tight-crumb, deep-crust results &mdash; and the specific mistakes to avoid.</p>
+        </li>
+        <li class="card">
+          <span class="card__num">N&deg;&thinsp;02</span>
+          <h3 class="card__title"><a href="#">A love letter to browned butter</a></h3>
+          <p class="card__meta">May 2026 &middot; 4 min read</p>
+          <p class="card__excerpt">A cheap ingredient, five extra minutes, and the closest thing to a free upgrade cooking will give you. Where to use it, and where it drowns.</p>
+        </li>
+        <li class="card">
+          <span class="card__num">N&deg;&thinsp;03</span>
+          <h3 class="card__title"><a href="#">Making kimchi at home: worth it or not?</a></h3>
+          <p class="card__meta">Mar 2026 &middot; 7 min read</p>
+          <p class="card__excerpt">Cost, effort, taste, fridge-space &mdash; an honest audit after a year of monthly batches. Verdict is not what I expected.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="category category--books" aria-labelledby="cat-books">
+      <header class="category__header">
+        <div class="category__intro">
+          <p class="kicker">&sect; 04 &middot; Books</p>
+          <h2 class="category__title" id="cat-books">On <em>books</em>.</h2>
+          <p class="category__blurb">Notes from the margins &mdash; the books that stayed with me and the pages I keep returning to.</p>
+        </div>
+        <a class="all-link" href="#" aria-label="See all Books notes">All notes <span class="all-link__arrow" aria-hidden="true">&rarr;</span></a>
+      </header>
+      <ol class="cards">
+        <li class="card">
+          <span class="card__num">N&deg;&thinsp;01</span>
+          <h3 class="card__title"><a href="#">On finishing <em>The Power Broker</em></a></h3>
+          <p class="card__meta">Jun 2026 &middot; 8 min read</p>
+          <p class="card__excerpt">1,300 pages, four months of subway commutes, one bruised worldview. Notes on what Caro is really doing under the biography.</p>
+        </li>
+        <li class="card">
+          <span class="card__num">N&deg;&thinsp;02</span>
+          <h3 class="card__title"><a href="#">Fiction I keep re-reading and why</a></h3>
+          <p class="card__meta">Apr 2026 &middot; 6 min read</p>
+          <p class="card__excerpt">Three novels I&rsquo;ve read at least four times each &mdash; and the specific pages I open to when I need a particular feeling back.</p>
+        </li>
+        <li class="card">
+          <span class="card__num">N&deg;&thinsp;03</span>
+          <h3 class="card__title"><a href="#">Notes from <em>Thinking in Systems</em></a></h3>
+          <p class="card__meta">Feb 2026 &middot; 5 min read</p>
+          <p class="card__excerpt">Meadows&rsquo; little book of leverage points, distilled into the six ideas I keep coming back to in my own work.</p>
+        </li>
+      </ol>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__wrap">
+      <ul class="site-footer__links">
+        <li><a href="mailto:sjsujay96@gmail.com">Email</a></li>
+        <li><a href="https://github.com/sjsujay">GitHub</a></li>
+        <li><a href="#">RSS</a></li>
+      </ul>
+      <p class="site-footer__meta">&copy; 2026 Sujay &middot; <em>Written in warm rooms.</em></p>
+    </div>
+  </footer>
 </body>
 </html>
